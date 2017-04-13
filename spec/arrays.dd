@@ -379,6 +379,8 @@ double[3][3] matrix;
 double matrix[3,3];
 ---------
 
+        $(P Dynamic rectangular multidimensional arrays (ndslices) are implemented as generic library solution in $(LINK2 https://github.com/libmir/mir-algorithm, mir-algorithm).)
+
 $(H2 $(LNAME2 array-length, Array Length))
 
 
