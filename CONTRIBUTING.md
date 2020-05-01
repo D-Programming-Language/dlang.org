@@ -39,6 +39,16 @@ website pages. You may see warnings while the compiler is built. After `make`
 ends with error code 0, directory `web` should contain the produced HTML
 files. Take a moment to open `web/index.html` in a browser.
 
+### Building with a slow internet connection
+
+The dlang.org build process depends on files which are downloaded during
+the build process. If you happen to have a slow internet connection, you can skip
+these downloads with `DIFFABLE=1`:
+
+```
+make -f posix.mak html DIFFABLE=1
+```
+
 ## Building the standard library documentation
 
 Now that the main site is in place, the standard library documentation would be
@@ -108,3 +118,7 @@ make -f posix.mak html -j4 STABLE_DMD=dmd STABLE_DMD_CONF=/etc/dmd.conf
 ### Learning more about DDoc
 
 Please see the [Ddoc fundamentals](https://wiki.dlang.org/Contributing_to_dlang.org).
+
+### Learn about more Makefile targets and options
+
+The full list of available targets and options is documented in the header of `posix.mak`.
